@@ -15,9 +15,10 @@ class App extends React.Component {
       data : ['Alex', 'Bob', 'John'],
     }
     this.input = React.createRef();
+    this.add = this.add.bind(this);
   }
   
-  add = () => {
+  add() {
     this.setState({
       data: [...this.state.data, this.input.current.value],
     })
